@@ -13,6 +13,7 @@ install:
   - cd %HOME%
   - mkdir reports
   - touch reports\\xunit.xml
+  - ps: cd $env:HOME; ls
 build: false # Not a C# project, build stuff at the test step instead.
 
 
