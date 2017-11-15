@@ -8,9 +8,8 @@ environment:
     PYTHONHASHSEED: "0"
 
 install:
-  - cd %HOME%
-  - mkdir reports
-  - touch reports\\xunit.xml
+  - mkdir %USERPROFILE%\reports
+  - python -c "import os; open(os.path.join(os.path.expanduser('~'), 'xunit.xml').write('hi')"
   - ps: cd $env:USERPROFILE; ls
 build: false # Not a C# project, build stuff at the test step instead.
 
