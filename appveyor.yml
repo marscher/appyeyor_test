@@ -8,8 +8,9 @@ environment:
     PYTHONHASHSEED: "0"
 
 install:
-  - mkdir %HOME\\reports\\
-  - touch %HOME%\\reports\\xunit.xml
+  - cd %HOME%
+  - mkdir reports
+  - touch reports\\xunit.xml
 build: false # Not a C# project, build stuff at the test step instead.
 
 
