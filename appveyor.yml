@@ -9,7 +9,7 @@ environment:
 
 install:
   - mkdir %USERPROFILE%\reports
-  - python -c "import os; open(os.path.join(os.path.expanduser('~'), 'xunit.xml').write('hi')"
+  - python -c "import os; open(os.path.join(os.path.expanduser('~'),'reports', 'xunit.xml'),'w').write('hi')" 
   - ps: cd $env:USERPROFILE; ls
 build: false # Not a C# project, build stuff at the test step instead.
 
